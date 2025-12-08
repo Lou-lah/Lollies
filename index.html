@@ -4,24 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lollies - Landing Page</title>
-        <!-- TailwindCSS CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body class="bg-gray-900 text-white min-h-screen flex flex-col">
-<!-- Navn / Logo -->
+<!-- Nav / Logo -->
         <header class="p-6 flex justify-between items-center">
-            <h1 class="text-3xl font-bold tracking-wide text-red-500">Lollies</h1>
+            <h1 class="text-4xl font-bold tracking-wide text-red-600">Lollies</h1>
         </header>
 
 <!-- Hero Sec -->
         <section class="flex flex-col items-center text-center px-6 mt-10">
             <h2 class="text-4xl font-extrabold mb-3">Unlimited Movies, Anytime, Anyday.</h2>
-            <p class="text-gray-300 max-w-md mb-6">Watch anywhere. Sign up to save your favourites and enjoy personalized movie picks!</p>
+            <p class="text-gray-300 max-w-md mb-6">Sign up to save your favourites movies and enjoy personalized movie picks!</p>
 
             <div class="flex gap-4 mt-4">
-            <a href="login.html" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-md text-lg font-semibold">Login</a>
-            <a href="signup.html" class="bg-white text-gray-900 hover:bg-gray-300 px-6 py-2 rounded-md text-lg font-semibold">Sign Up</a>
+            <a href="Lollies_login.html" class="bg-red-700 hover:bg-red-500 px-6 py-2 rounded-md text-lg font-semibold">Login</a>
+            <a href="Lollies.signup.html" class="bg-white text-gray-900 hover:bg-gray-300 px-6 py-2 rounded-md text-lg font-semibold">Sign Up</a>
             </div>
         </section>
 
@@ -29,21 +28,33 @@
         <section class="mt-12 px-6">
             <h3 class="text-xl mb-4 font-semibold">Popular Now</h3>
 
-<!-- Movie Posters Grid -->
-            <div class="grid grid-cols-3 gap-3 md:grid-cols-6">
-            <!-- Placeholder Poster Images -->
-            <div class="w-full h-48 bg-gray-700 rounded-md"></div>
-            <div class="w-full h-40 bg-gray-700 rounded-md"></div>
-            <div class="w-full h-40 bg-gray-700 rounded-md"></div>
-            <div class="w-full h-40 bg-gray-700 rounded-md"></div>
-            <div class="w-full h-40 bg-gray-700 rounded-md"></div>
-            <div class="w-full h-40 bg-gray-700 rounded-md"></div>
+<!-- Movie Grid -->
+            <div class="grid grid-cols-3 gap-4 md:grid-cols-6">
+    <!-- Placeholder Poster Images -->
+                <div class="w-full h-48 bg-gray-700 rounded-md">
+                    <img src="Dr. House.jpeg" alt="movie 1" class="w-full h-48 object-cover rounded-md"> 
+                </div>
+                <div class="w-full h-48 bg-gray-700 rounded-md">
+                    <img src="Catering Christmas.jpeg" alt="movie 2" class="w-full h-48 object-cover rounded-md">
+                </div>
+                <div class="w-full h-48 bg-gray-700 rounded-md">
+                    <img src="money heist.jpeg" alt="movie 3" class="w-full h-48 object-cover rounded-md">
+                </div>
+                <div class="w-full h-48 bg-gray-700 rounded-md">
+                    <img src="bones.jpeg" alt="movie 4" class="w-full h-48 object-cover rounded-md">
+                </div>
+                <div class="w-full h-48 bg-gray-700 rounded-md">
+                    <img src="svu2.jpeg" alt="movie 5" class="w-full h-48 object-cover rounded-md">
+                </div>
+                <div class="w-full h-48 bg-gray-700 rounded-md">
+                    <img src="htgawm.jpeg" alt="movie 6" class="w-full h-48 object-cover rounded-md">
+                </div>
             </div>
         </section>
 
 <!-- Footer -->
         <footer class="mt-auto p-6 text-center text-gray-400 text-sm">
-            © 2025 MyFlix. All rights reserved.
+            © 2025 Lollies. All rights reserved.
         </footer>
     </body>
 </html>
