@@ -47,7 +47,7 @@ const logoutBtn = document.getElementById('logout-btn');
     if (logoutBtn) {
     logoutBtn.addEventListener('click', () => {
         localStorage.removeItem('loggedInUser');
-        window.location.href = 'login.html';
+        window.location.href = 'Lollies_login.html';
     });
     }
 
@@ -56,29 +56,52 @@ const movieGrid = document.getElementById('movie-grid');
 if (movieGrid) {
     const loggedInUser = localStorage.getItem('loggedInUser');
     if (!loggedInUser) {
-        window.location.href = 'login.html';
+        window.location.href = 'Lollies_login.html';
     }
 
-/*Sample movie data*/
+/*movie data*/
     const movies = [
-        { id: 1, title: 'Action Movie', img: 'images/movie1.jpg', genre: 'Action', year: 2025, rating: 'PG-13' },
-        { id: 2, title: 'Comedy Movie', img: 'images/movie2.jpg', genre: 'Comedy', year: 2024, rating: 'PG' },
-        { id: 3, title: 'Romance Movie', img: 'images/movie3.jpg', genre: 'Romance', year: 2023, rating: 'PG-13' },
-        { id: 4, title: 'Horror Movie', img: 'images/movie4.jpg', genre: 'Horror', year: 2025, rating: 'R' },
-        { id: 5, title: 'Drama Movie', img: 'images/movie5.jpg', genre: 'Drama', year: 2022, rating: 'PG' }
+        { id: 1, title: 'Special Victims Unit', img: 'images/svu2.jpeg', genre: 'Action', year: 2017, rating: 'PG-10' },
+        { id: 2, title: 'Identity Thief', img: 'images/idthief.jpg', genre: 'Comedy', year: 2013, rating: '18+' },
+        { id: 3, title: 'Catering Christmas', img: 'images/cateringchristmas.jpeg', genre: 'Romance', year: 2025, rating: 'All' },
+        { id: 4, title: 'How To Get Away With Murder', img: 'images/htgawm.jpeg', genre: 'Horror', year: 2025, rating: 'R' },
+        { id: 5, title: 'House', img: 'images/drhouse.jpeg', genre: 'Drama', year: 2011, rating: '18+' },
+
+        { id: 6, title: 'The Dark Knight', img: 'images/tdk.jpeg', genre: 'Action', year: 2008, rating: 'PG-15' },
+        { id: 7, title: 'The Notebook', img: 'images/notebk.jpeg', genre: 'Romance', year: 2004, rating: 'PG-15' },
+        { id: 8, title: 'Get Out', img: 'images/getout.jpg', genre: 'Horror', year: 2017, rating: 'R' }
     ];
 
 /*Render movies*/
-    movies.forEach(movie => {
-        const card = document.createElement('div');
-        card.className = 'aspect-[2/3] max-w-[220px] mx-auto bg-gray-800 rounded-md overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform';
-        card.innerHTML = `<img src='${movie.img}' alt='${movie.title}' class='w-full h-full object-cover' />`;
+    function renderMovies(movieArray, gridId) {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
 
-        // Click to movie details page
-        card.addEventListener('click', () => {
-        window.location.href = `movie-details.html?id=${movie.id}`;
+        movieArray.forEach(movie => {
+            const card = document.createElement('div');
+            card.className =
+                'aspect-[2/3] max-w-[220px] mx-auto bg-gray-800 rounded-md overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform';
+
+            card.innerHTML = `
+                <img src="${movie.img}" alt="${movie.title}" class="w-full h-full object-cover" />
+            `;
+
+            card.addEventListener('click', () => {
+                window.location.href = `Lollies_movie_deets.html?id=${movie.id}`;
+            });
+
+            grid.appendChild(card);
         });
+    }
 
-        movieGrid.appendChild(card);
-    });
+    /* POPULAR MOVIES*/
+    renderMovies(movies, "movie-grid");
+
+    /* GENRE SECTIONS */
+    renderMovies(movies.filter(m => m.genre === "Action"), "action-grid");
+    renderMovies(movies.filter(m => m.genre === "Comedy"), "comedy-grid");
+    renderMovies(movies.filter(m => m.genre === "Romance"), "romance-grid");
+    renderMovies(movies.filter(m => m.genre === "Horror"), "horror-grid");
+    renderMovies(movies.filter(m => m.genre === "Drama"), "drama-grid");
 }
+
