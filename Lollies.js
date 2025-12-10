@@ -64,7 +64,7 @@ if (movieGrid) {
         { id: 1, title: 'Special Victims Unit', img: 'images/svu2.jpeg', genre: 'Action', year: 2017, rating: 'PG-10' },
         { id: 2, title: 'Identity Thief', img: 'images/idthief.jpg', genre: 'Comedy', year: 2013, rating: '18+' },
         { id: 3, title: 'Catering Christmas', img: 'images/cateringchristmas.jpeg', genre: 'Romance', year: 2025, rating: 'All' },
-        { id: 4, title: 'How To Get Away With Murder', img: 'images/htgawm.jpeg', genre: 'Horror', year: 2025, rating: 'R' },
+        { id: 4, title: 'How To Get Away With Murder', img: 'images/htgawm.jpeg', genre: 'Horror', year: 2022, rating: 'R' },
         { id: 5, title: 'House', img: 'images/drhouse.jpeg', genre: 'Drama', year: 2011, rating: '18+' },
 
         { id: 6, title: 'The Dark Knight', img: 'images/tdk.jpeg', genre: 'Action', year: 2008, rating: 'PG-15' },
@@ -94,7 +94,7 @@ if (movieGrid) {
         });
     }
 
-    /* POPULAR MOVIES*/
+    /* MOVIES*/
     renderMovies(movies, "movie-grid");
 
     /* GENRE SECTIONS */
