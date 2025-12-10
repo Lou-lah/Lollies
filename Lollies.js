@@ -12,7 +12,7 @@ const loginForm = document.getElementById('login-form');
         if (user) {
         localStorage.setItem('loggedInUser', user.username);
         alert('Login successful!');
-        window.location.href = 'home.html';
+        window.location.href = 'Lollies_homepage.html';
         } else {
         alert('Invalid email or password');
         }
@@ -38,7 +38,7 @@ const signupForm = document.getElementById('signup-form');
             users.push({ username, email, password });
             localStorage.setItem('users', JSON.stringify(users));
             alert('Signup successful! You can now login.');
-            window.location.href = 'login.html';
+            window.location.href = 'Lollies_login.html';
         });
     }
 
