@@ -67,6 +67,18 @@ const movies = [
     { id: 7, title: 'The Notebook', img: 'images/notebk.jpeg', genre: 'Romance', year: 2004, rating: 'PG-15', description:"Lorem ipsum sit..." },
     { id: 8, title: 'Get Out', img: 'images/getout.jpg', genre: 'Horror', year: 2017, rating: 'R', description:"Lorem ipsum sit..." }
 ];
+/*movie data*/
+    const movies = [
+        { id: 1, title: 'Special Victims Unit', img: 'images/svu2.jpeg', genre: 'Action', year: 2017, rating: 'PG-10' },
+        { id: 2, title: 'Identity Thief', img: 'images/idthief.jpg', genre: 'Comedy', year: 2013, rating: '18+' },
+        { id: 3, title: 'Catering Christmas', img: 'images/cateringchristmas.jpeg', genre: 'Romance', year: 2025, rating: 'All' },
+        { id: 4, title: 'How To Get Away With Murder', img: 'images/htgawm.jpeg', genre: 'Horror', year: 2022, rating: 'R' },
+        { id: 5, title: 'House', img: 'images/drhouse.jpeg', genre: 'Drama', year: 2011, rating: '18+' },
+
+        { id: 6, title: 'The Dark Knight', img: 'images/tdk.jpeg', genre: 'Action', year: 2008, rating: 'PG-15' },
+        { id: 7, title: 'The Notebook', img: 'images/notebk.jpeg', genre: 'Romance', year: 2004, rating: 'PG-15' },
+        { id: 8, title: 'Get Out', img: 'images/getout.jpg', genre: 'Horror', year: 2017, rating: 'R' }
+    ];
 
 /* HOMEPAGE RENDERING */
 function renderMovies(movieArray, gridId) {
@@ -95,6 +107,7 @@ function renderMovies(movieArray, gridId) {
 if (document.getElementById("movie-grid")) {
     if (!loggedInUser) window.location.href = 'Lollies_login.html';
 
+    /* MOVIES*/
     renderMovies(movies, "movie-grid");
     renderMovies(movies.filter(m => m.genre === "Action"), "action-grid");
     renderMovies(movies.filter(m => m.genre === "Comedy"), "comedy-grid");
