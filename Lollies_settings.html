@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+
+    <!-- Top Navigation -->
+    <header class="p-4 bg-gray-800 relative">
+        <nav class="bg-gray-800 p-4 relative flex items-center">
+            
+            <!-- Back Button (Left) -->
+            <a href="Lollies_homepage.html" class="absolute left-4 text-red-500 hover:text-red-700">
+                ←
+            </a>
+
+            <h1 class="text-center mx-auto text-2xl font-bold">
+                Settings
+            </h1>
+
+            <a href="Lollies_profile.html" class="absolute right-4 text-red-500 hover:text-red-700">
+                Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- Settings Container -->
+    <div class="max-w-2xl mx-auto mt-8 p-6 bg-gray-800 rounded-lg shadow-lg">
+
+        <h2 class="text-2xl font-bold mb-4">Account Settings</h2>
+
+        <!-- Username -->
+        <div class="mb-6">
+            <label class="block text-gray-300 mb-1">Change Username</label>
+            <input type="text" id="new-username" class="w-full p-2 rounded bg-gray-700 text-white outline-none">
+            <button id="save-username"
+                    class="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg">
+                Save Username
+            </button>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-6">
+            <label class="block text-gray-300 mb-1">Change Email</label>
+            <input type="email" id="new-email" class="w-full p-2 rounded bg-gray-700 text-white outline-none">
+            <button id="save-email"
+                    class="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg">
+                Save Email
+            </button>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-6">
+            <label class="block text-gray-300 mb-1">Change Password</label>
+            <input type="password" id="new-password" class="w-full p-2 rounded bg-gray-700 text-white outline-none">
+            <button id="save-password"
+                    class="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg">
+                Save Password
+            </button>
+        </div>
+
+        <hr class="border-gray-600 my-8">
+
+        <!-- Logout -->
+        <button id="logout-btn"
+                class="w-full py-3 bg-red-700 hover:bg-red-800 rounded-lg font-semibold">
+            Log Out
+        </button>
+
+    </div>
+
+    <script src="Lollies.js"></script>
+</body>
+</html>
